@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace OcpAndDecoratorExample
 {
-    internal class Robot
+    public class Robot
     {
-        internal void DoWork1()
+        public void DoWork1()
         {
             Console.WriteLine("Do first work");
         }
-        internal void DoWork2()
+        public void DoWork2()
         {
             Console.WriteLine("Do second work"); 
         }
-        internal void DoWork3() 
+        public void DoWork3() 
         { 
             Console.WriteLine("Do third work"); 
         }
-        internal void DoWork4() 
+        public void DoWork4() 
         {
             Console.WriteLine("Do fourth work"); 
         }
