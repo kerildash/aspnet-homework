@@ -1,4 +1,4 @@
-﻿using OcpAndDecoratorExample.InitialPoint;
+﻿using OcpAndDecoratorExample.GoodExample;
 
 namespace OcpAndDecoratorExample
 {
@@ -6,8 +6,10 @@ namespace OcpAndDecoratorExample
     {
         static void Main(string[] args)
         {
-            var menu = new Menu(new Robot());
-            menu.PrintMenu();
+            var robot = new Robot() ;
+            var menu = new AdditionalOptionsMenuDecorator(new Menu(robot), robot);
+            var input = menu.PrintMenu(menu.GenerateMenuView());
+            menu.HandleInput(input);
         }
     }
 }
